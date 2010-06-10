@@ -2453,7 +2453,7 @@ insert a line to tell how to insert more of them"
 	(when remote-string
 	  (insert "Remote: " remote-string "\n"))
 	(insert (format "Local:  %s %s\n"
-			(propertize (or branch "(detached)")
+			(propertize (or branch (magit-name-rev "HEAD"))
 				    'face 'magit-branch)
 			(abbreviate-file-name default-directory)))
 	(insert (format "Head:   %s\n"
