@@ -359,7 +359,7 @@ Many Magit faces inherit from this one by default."
 (make-variable-buffer-local 'magit-submode)
 (put 'magit-submode 'permanent-local t)
 
-(eval-when-compile
+(eval-and-compile
   (defun magit-dynamic-clauses-helper (clauses context)
     `(((magit-dynamic-clauses ,clauses ,context) t))))
 
